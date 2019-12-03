@@ -23,5 +23,18 @@ public @Data class Contact {
 	private String lastname;
 	@Column(name="birthdate")
 	private Date birthdate;
+	
+	
+	public Contact(String firstname, String lastname) {
+		super();
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+
+	public Contact() {
+		super();
+	}
+	
+	
 
 }

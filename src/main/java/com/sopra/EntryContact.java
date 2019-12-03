@@ -2,7 +2,9 @@ package com.sopra;
 
 import javax.persistence.EntityManager;
 
+import com.sopra.dao.ContactImplDao;
 import com.sopra.dao.Context;
+import com.sopra.model.Contact;
 
 public class EntryContact {
 
@@ -11,6 +13,12 @@ public class EntryContact {
 
 		try {
 			em.getTransaction().begin(); 
+
+			ContactImplDao cdao = new ContactImplDao();
+			Contact c = new Contact();
+			c.setFirstname("Monsieur Rigolo");
+			c.setLastname("Trop de Fun");
+			cdao.insert(c);
 
 			
 			// BLABLABLA
